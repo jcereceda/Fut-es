@@ -281,8 +281,6 @@ exports.actualizarPerfil = async (req, res) => {
         nombre: user.nombre,
         apellidos: user.apellidos,
         email: user.email,
-        rol: user.rol,
-        foto: user.foto,
         id_equipo_fav: user.id_equipo_fav,
         id_jugador_fav: user.id_jugador_fav
       });

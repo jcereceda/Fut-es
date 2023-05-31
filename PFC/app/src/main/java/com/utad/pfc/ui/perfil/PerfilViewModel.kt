@@ -111,13 +111,6 @@ class PerfilViewModel : ViewModel() {
             val response = ApiRest.service.actualizar(ApiRest.UserLogged.accessToken,user)
             if (response.isSuccessful && response.body() != null) {
                 usuario.value = response.body() as Usuario
-                Log.i("perfilVM", usuario.value.apellidos)
-                ApiRest.UserLogged.nombre = usuario.value.nombre
-                ApiRest.UserLogged.apellidos = usuario.value.apellidos
-                ApiRest.UserLogged.email = usuario.value.email
-                ApiRest.UserLogged.fechaNac = usuario.value.fechaNac
-                ApiRest.UserLogged.id_equipo_fav = usuario.value.id_equipo_fav
-                ApiRest.UserLogged.id_jugador_fav = usuario.value.id_jugador_fav
             } else {
                 Log.i("PerfilViewModel", "Usuario Actualizado: ${response.errorBody()?.string()}")
             }

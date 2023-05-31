@@ -140,6 +140,12 @@ class ModificarPerfi : Fragment() {
                 launch {
                     PerflviewModel.usuario.collect{
                         if(it.id != 0){
+                            ApiRest.UserLogged.nombre = it.nombre
+                            ApiRest.UserLogged.apellidos = it.apellidos
+                            ApiRest.UserLogged.email = it.email
+                            ApiRest.UserLogged.id_equipo_fav = it.id_equipo_fav
+                            ApiRest.UserLogged.id_jugador_fav = it.id_jugador_fav
+                            Log.i("PerfilVM", ApiRest.UserLogged.id_equipo_fav.toString())
                             activity?.supportFragmentManager?.popBackStack()
                         }
                         it.id = 0

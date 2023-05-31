@@ -1,12 +1,12 @@
 {
-  "name": "api_ejemplo",
+  "name": "api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "jcereceda",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

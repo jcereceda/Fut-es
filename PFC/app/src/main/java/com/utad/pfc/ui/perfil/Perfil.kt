@@ -78,7 +78,7 @@ class Perfil : Fragment() {
         nombreUser.text = ApiRest.UserLogged.nombre + " " + ApiRest.UserLogged.apellidos
         imgPerfil = binding.imgUser
         rvPartidos = view.findViewById(R.id.rvPartidosEquipo)
-        escudo = view.findViewById<ImageView>(R.id.escudoEquipoFav)
+        escudo = view.findViewById(R.id.escudoEquipoFav)
         caraJugador = view.findViewById(R.id.estadsJugador)
         nombreJugador = view.findViewById(R.id.nombreJugadorFav)
         tfCantGoles = view.findViewById(R.id.cantGoles)
@@ -177,6 +177,8 @@ class Perfil : Fragment() {
 
     }
 
+
+
     private fun openDialog() {
         val dialog = ModificarPerfi()
         var bundle = Bundle()
@@ -190,7 +192,6 @@ class Perfil : Fragment() {
             ?.commit()
        // activity?.supportFragmentManager?.let { dialog.show(it ,"Modif") }
     }
-
 
     private fun ponerEscudo(escudo: String, Imgescudo: ImageView) {
         val storage = FirebaseStorage.getInstance()
