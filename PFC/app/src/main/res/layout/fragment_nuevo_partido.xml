@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.partidos.nuevo_partido.NuevoPartido"
+    android:id="@+id/main_container">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        tools:ignore="MissingConstraints"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="238dp"
+        android:layout_height="212dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/selectedLocal"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo3"
+        app:layout_constraintEnd_toEndOf="@+id/etLocal"
+        app:layout_constraintStart_toStartOf="@+id/etLocal"
+        app:layout_constraintTop_toBottomOf="@+id/etLocal" />
+
+    <ImageView
+        android:id="@+id/selectedVisitante"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo3"
+        app:layout_constraintEnd_toEndOf="@+id/etVisitante"
+        app:layout_constraintStart_toStartOf="@+id/etVisitante"
+        app:layout_constraintTop_toBottomOf="@+id/etVisitante" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/selectedVisitante"
+        app:layout_constraintEnd_toStartOf="@+id/selectedVisitante"
+        app:layout_constraintStart_toEndOf="@+id/selectedLocal"
+        app:layout_constraintTop_toBottomOf="@+id/etVisitante"
+        tools:ignore="UnknownId" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/empezar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:backgroundTint="#FB0202"
+        android:paddingLeft="25dp"
+        android:paddingRight="30dp"
+        android:text="Empezar partido"
+        android:textAllCaps="false"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/etLocal"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+        android:text=" seleccionar local"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/etVisitante"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:text="seleccionar visitante"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empezar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Escoge tus equipos"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

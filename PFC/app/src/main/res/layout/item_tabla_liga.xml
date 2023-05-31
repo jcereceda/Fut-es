@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="35dp">
+    <TextView
+        android:id="@+id/posicion"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:paddingRight="4dp"
+        android:text="2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/escudoEquipo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/posicion"
+        app:layout_constraintStart_toEndOf="@+id/posicion"
+        app:layout_constraintTop_toTopOf="@+id/posicion" />
+
+    <TextView
+        android:id="@+id/nombreEquipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Real Madrid"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/escudoEquipo"
+        app:layout_constraintStart_toEndOf="@+id/escudoEquipo"
+        app:layout_constraintTop_toTopOf="@+id/escudoEquipo" />
+
+    <TextView
+        android:id="@+id/partidosJugados"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="8dp"
+        android:text="0"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/partidosGanados"
+        app:layout_constraintEnd_toStartOf="@+id/partidosGanados"
+        app:layout_constraintLeft_toRightOf="@+id/barrier2"
+        app:layout_constraintTop_toTopOf="@+id/partidosGanados" />
+
+    <TextView
+        android:id="@+id/partidosGanados"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="8dp"
+        android:text="0"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/partidosEmpatados"
+        app:layout_constraintEnd_toStartOf="@+id/partidosEmpatados"
+        app:layout_constraintTop_toTopOf="@+id/partidosEmpatados" />
+
+    <TextView
+        android:id="@+id/partidosEmpatados"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="8dp"
+        android:text="0"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPartidosPerdidos"
+        app:layout_constraintEnd_toStartOf="@+id/tvPartidosPerdidos"
+        app:layout_constraintTop_toTopOf="@+id/tvPartidosPerdidos" />
+
+    <TextView
+        android:id="@+id/tvPartidosPerdidos"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="0"
+        android:textSize="14sp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/puntos"
+        app:layout_constraintEnd_toStartOf="@+id/puntos"
+        app:layout_constraintTop_toTopOf="@+id/puntos" />
+
+    <TextView
+        android:id="@+id/puntos"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="8dp"
+        android:text="0"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/golesFavor"
+        app:layout_constraintEnd_toStartOf="@+id/golesFavor"
+        app:layout_constraintTop_toTopOf="@+id/golesFavor" />
+
+    <TextView
+        android:id="@+id/golesFavor"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="0"
+        android:textSize="14sp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/golesContra"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/golesContra"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="0"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="golesFavor,partidosGanados,partidosJugados,partidosEmpatados,puntos,tvPartidosPerdidos, golesContra"
+        tools:layout_editor_absoluteX="410dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gris"
+        app:layout_constraintBottom_toBottomOf="@+id/posicion"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

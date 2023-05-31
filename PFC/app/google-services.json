@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "486664796237",
+    "project_id": "pfc-imagenes",
+    "storage_bucket": "pfc-imagenes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486664796237:android:b1ca974981a8fbc5cf4404",
+        "android_client_info": {
+          "package_name": "com.utad.pfc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486664796237-ch3qcvmeqog2kbms690afckcsb9f770p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBthY68F2i3RGEa80k2xqPv5XaUY1ELWwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486664796237-ch3qcvmeqog2kbms690afckcsb9f770p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

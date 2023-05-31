@@ -1,0 +1,236 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbarEditPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:paddingStart="6dp"
+                android:paddingEnd="16dp"
+                app:title="Modificar perfil"
+                app:layout_constraintTop_toTopOf="parent"
+                app:contentInsetStartWithNavigation="0dp"
+                app:titleCentered="true"
+                app:navigationIcon="@drawable/ic_close_black_24dp"
+                app:titleTextColor="@color/verde" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layModifEmail"
+                style="@style/misTextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:hint="Email"
+                app:boxStrokeColor="@color/verde"
+                app:hintTextColor="@color/verde"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tfEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/verde"
+                    android:textCursorDrawable="@null"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layModifNombre"
+                style="@style/misTextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:paddingTop="10dp"
+                app:boxStrokeColor="@color/verde"
+                app:hintTextColor="@color/verde"
+                app:layout_constraintTop_toBottomOf="@+id/layModifEmail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tfNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/verde"
+                    android:textCursorDrawable="@null"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layModifApellidos"
+                style="@style/misTextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellidos"
+                android:paddingTop="10dp"
+                app:boxStrokeColor="@color/verde"
+                app:hintTextColor="@color/verde"
+                app:layout_constraintTop_toBottomOf="@+id/layModifNombre">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tfApellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/verde"
+                    android:textCursorDrawable="@null"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/modifEquipoFav"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Equipo favorito"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                android:paddingRight="30dp"
+                app:boxStrokeColor="@color/verde"
+                app:endIconMode="custom"
+                android:textColorHint="@color/verde"
+                app:hintTextColor="@color/verde"
+                app:endIconTint="@color/verde"
+                app:endIconDrawable="@drawable/arrow"
+                app:layout_constraintTop_toBottomOf="@+id/layModifApellidos">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/tfModifEquipo"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/verde"
+                    android:editable="false"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/modifJugadorFav"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jugador favorito"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                android:paddingRight="30dp"
+                app:boxStrokeColor="@color/verde"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/verde"
+                android:textColorHint="@color/verde"
+                app:endIconTint="@color/verde"
+                app:endIconDrawable="@drawable/arrow"
+                app:layout_constraintTop_toBottomOf="@+id/modifEquipoFav">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/tfModifJugador"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/verde"
+                    android:editable="false"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGuardarCambios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/verde"
+                android:paddingLeft="25dp"
+                android:paddingRight="30dp"
+                android:text="Guardar cambios"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:cornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modifJugadorFav" />
+
+            <View
+                android:id="@+id/dividerModif"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/verde"
+                app:layout_constraintTop_toBottomOf="@+id/btnGuardarCambios" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layModifPassword"
+                style="@style/misTextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:hint="Nueva Contraseña"
+                android:paddingTop="10dp"
+                app:boxStrokeColor="@color/verde"
+                app:endIconMode="password_toggle"
+                app:hintTextColor="@color/verde"
+                app:layout_constraintTop_toBottomOf="@+id/dividerModif">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tfPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/verde"
+                    android:textCursorDrawable="@null"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layModifConfirmPass"
+                style="@style/misTextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cofirmar Contraseña"
+                android:paddingTop="10dp"
+                app:boxStrokeColor="@color/verde"
+                app:endIconMode="password_toggle"
+                app:hintTextColor="@color/verde"
+                app:layout_constraintTop_toBottomOf="@+id/layModifPassword">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tfConfirmPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textCursorDrawable="@null"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCambiarPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/verde"
+                android:paddingLeft="25dp"
+                android:paddingRight="30dp"
+                android:text="Cambiar contraseña"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:cornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layModifConfirmPass" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

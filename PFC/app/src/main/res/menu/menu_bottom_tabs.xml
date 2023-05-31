@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/partidos"
+        android:title="@string/menu_partidos"
+        android:icon="@drawable/balon"/>
+    <item
+        android:id="@+id/clasificacion"
+        android:title="@string/menu_clasif"
+        android:icon="@drawable/icon_clasificacion"/>
+    <item
+        android:id="@+id/estadisticas"
+        android:title="@string/menu_estadisticas"
+        android:icon="@drawable/icon_estadisticas"/>
+    <item
+        android:id="@+id/perfil"
+        android:title="@string/menu_perfil"
+        android:icon="@drawable/icon_perfil"/>
+</menu>

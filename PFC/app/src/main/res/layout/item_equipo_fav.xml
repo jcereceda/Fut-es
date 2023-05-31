@@ -1,0 +1,81 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:id="@+id/cardFav">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgEscudoLocal"
+            android:layout_width="34dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imgEscudoVisitante"
+            android:layout_width="34dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgEscudoLocal"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/nombreEquipoLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Real Madrid"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgEscudoLocal"
+            app:layout_constraintStart_toEndOf="@+id/imgEscudoLocal"
+            app:layout_constraintTop_toTopOf="@+id/imgEscudoLocal" />
+
+        <TextView
+            android:id="@+id/nombreEquipoVisitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Barceliona"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgEscudoVisitante"
+            app:layout_constraintStart_toEndOf="@+id/imgEscudoVisitante"
+            app:layout_constraintTop_toTopOf="@+id/imgEscudoVisitante" />
+
+        <TextView
+            android:id="@+id/golesLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="0"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nombreEquipoLocal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nombreEquipoLocal" />
+
+        <TextView
+            android:id="@+id/golesVisitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="0"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nombreEquipoVisitante"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nombreEquipoVisitante" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

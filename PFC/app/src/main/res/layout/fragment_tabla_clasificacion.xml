@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.clasificacion.Tabla_clasificacion">
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/leyenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/verde"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cabecera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Nombre liga"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPosicion"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text=" "
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cabecera" />
+
+
+        <ImageView
+            android:id="@+id/imgEscudo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPosicion"
+            app:layout_constraintStart_toEndOf="@+id/tvPosicion"
+            app:layout_constraintTop_toTopOf="@+id/tvPosicion" />
+
+        <TextView
+            android:id="@+id/tvNombreEquipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Equipo"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgEscudo"
+            app:layout_constraintStart_toEndOf="@+id/imgEscudo"
+            app:layout_constraintTop_toTopOf="@+id/imgEscudo" />
+
+        <TextView
+            android:id="@+id/tvPartidosJugados"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:text="PJ"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPartidosGanados"
+            app:layout_constraintEnd_toStartOf="@+id/tvPartidosGanados"
+            app:layout_constraintLeft_toRightOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/tvPartidosGanados" />
+
+        <TextView
+            android:id="@+id/tvPartidosGanados"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:text="V"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPartidosEmpatados"
+            app:layout_constraintEnd_toStartOf="@+id/tvPartidosEmpatados"
+            app:layout_constraintTop_toTopOf="@+id/tvPartidosEmpatados" />
+
+        <TextView
+            android:id="@+id/tvPartidosEmpatados"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:text="E"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPartidosPerdidos"
+            app:layout_constraintEnd_toStartOf="@+id/tvPartidosPerdidos"
+            app:layout_constraintTop_toTopOf="@+id/tvPartidosPerdidos" />
+
+
+        <TextView
+            android:id="@+id/tvPartidosPerdidos"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:text="D"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/puntos"
+            app:layout_constraintEnd_toStartOf="@+id/puntos"
+            app:layout_constraintTop_toTopOf="@+id/puntos" />
+
+
+        <TextView
+            android:id="@+id/puntos"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:text="Pts"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/golesFavor"
+            app:layout_constraintEnd_toStartOf="@+id/golesFavor"
+            app:layout_constraintTop_toTopOf="@+id/golesFavor" />
+
+        <TextView
+            android:id="@+id/golesFavor"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:text="GF"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvGolesContra"
+            app:layout_constraintTop_toBottomOf="@+id/cabecera" />
+
+        <TextView
+            android:id="@+id/tvGolesContra"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="GC"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cabecera" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:outlineAmbientShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="golesFavor,tvPartidosGanados,tvPartidosJugados,tvPartidosEmpatados,puntos,tvPartidosPerdidos,tvGolesContra"
+            tools:layout_editor_absoluteX="410dp"
+            tools:layout_editor_absoluteY="2dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/leyenda">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvClasificacion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_tabla_liga"
+            android:layout_marginBottom="87dp"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
