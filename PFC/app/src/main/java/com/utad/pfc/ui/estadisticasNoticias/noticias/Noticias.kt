@@ -21,6 +21,7 @@ import com.utad.pfc.API.ApiRest
 import com.utad.pfc.R
 import com.utad.pfc.ui.estadisticasNoticias.estadisticas.EstadisticasAdapter
 import com.utad.pfc.ui.estadisticasNoticias.noticias.leer_noticia.LeerNoticia
+import com.utad.pfc.ui.estadisticasNoticias.noticias.nueva_noticia.NuevaNoticia
 import com.utad.pfc.ui.partidos.datos_partido.DatosPartido
 import kotlinx.coroutines.launch
 
@@ -57,6 +58,11 @@ class Noticias : Fragment() {
         listenEvents()
 
         viewModel.getNoticias()
+
+        btnNuevaNoticia.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.main_container, NuevaNoticia())?.addToBackStack("estadisticasNoticias")?.commit()
+        }
     }
 
     private fun listenEvents() {

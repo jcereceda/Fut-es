@@ -6,7 +6,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiRest {
     lateinit var service: ApiService
-    val URL = "http://jcereceda.duckdns.org/api/"
+    val URL = "http://192.168.115.246:8080/api/"
+    //val URL = "http://jcereceda.duckdns.org/api/"
     var UserLogged:Usuario = Usuario()
 
     init {
