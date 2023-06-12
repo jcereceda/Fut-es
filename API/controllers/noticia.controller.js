@@ -64,7 +64,8 @@ exports.createNoticia = (req, res) => {
     noticia
         .save(noticia)
         .then(data =>{
-            res.send(data)
+          res.status(200).send()
+           console.log(data)
         })
         .catch(err => {
             res.status(500).send({

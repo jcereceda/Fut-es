@@ -145,6 +145,12 @@ interface ApiService {
     @GET("noticias")
     suspend fun getNoticias(): Response<List<Noticia>>
 
+    @POST("noticias")
+    fun guardarNoticia(
+        @Header("x-access-token") token: String,
+        @Body noticia: Noticia
+    ): Call<Void>
+
     @GET("jugador/{id}")
     suspend fun getJugador(
         @Path("id") id: Int
