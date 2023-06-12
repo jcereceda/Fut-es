@@ -324,7 +324,7 @@ module.exports = (app) => {
   );
   router.get(
     "/clasificacion/partidosganados/visitante",
-    partidoController.getPartidosGanadosLocal
+    partidoController.getPartidosGanadosVisitante
   );
 
   router.get(
