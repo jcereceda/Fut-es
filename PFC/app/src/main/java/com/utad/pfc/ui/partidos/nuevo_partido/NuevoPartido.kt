@@ -154,7 +154,6 @@ class NuevoPartido : Fragment() {
             override fun onFailure(call: Call<Partido>, t: Throwable) {
                 binding.tvError.text = "No se puede iniciar"
             }
-
         })
 
 

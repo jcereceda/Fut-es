@@ -445,7 +445,7 @@
 
 
                     <ImageView
-                        android:id="@+id/tarjetitaAmarillaLocal"
+                        android:id="@+id/tarjetitaAmarillaVisitante"
                         android:layout_width="15dp"
                         android:layout_height="30dp"
                         android:layout_marginStart="32dp"
@@ -464,7 +464,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/tarjetitaAmarillaLocal" />
 
                     <ImageView
-                        android:id="@+id/tarjetitaAmarillaVisitante"
+                        android:id="@+id/tarjetitaAmarillaLocal"
                         android:layout_width="15dp"
                         android:layout_height="30dp"
                         android:layout_marginEnd="32dp"
@@ -489,8 +489,8 @@
                         android:maxWidth="170px"
                         android:textSize="10sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tarjetitaAmarillaLocal"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/tarjetitaAmarillaLocal"
+                        app:layout_constraintEnd_toStartOf="@+id/tarjetitaAmarillaLocal"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tarjetitaAmarillaLocal" />
 
                     <TextView
@@ -500,8 +500,8 @@
                         android:maxWidth="170px"
                         android:textSize="10sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tarjetitaAmarillaVisitante"
-                        app:layout_constraintEnd_toStartOf="@+id/tarjetitaAmarillaVisitante"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tarjetitaAmarillaVisitante"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tarjetitaAmarillaVisitante" />
 
                     <TextView
@@ -511,8 +511,8 @@
                         android:maxWidth="170px"
                         android:textSize="10sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tarjetitaRojaLocal"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/tarjetitaRojaLocal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tarjetitaRojaLocal"
                         app:layout_constraintTop_toTopOf="@+id/tarjetitaRojaLocal" />
 
                     <TextView
@@ -522,8 +522,8 @@
                         android:maxWidth="170px"
                         android:textSize="10sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tarjetitaRojaVisitante"
-                        app:layout_constraintEnd_toStartOf="@+id/tarjetitaRojaVisitante"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tarjetitaRojaVisitante"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tarjetitaRojaVisitante" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

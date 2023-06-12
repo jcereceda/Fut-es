@@ -2,7 +2,7 @@ const db = require("../models");
 const Partido = db.partido;
 const Op = db.Sequelize.Op;
 const sequelize = db.sequelize;
-
+const moment = require('moment');
 exports.getPartidos = (req, res) => {
   Partido.findAll({
     order: [["fecha", "DESC"]],
@@ -95,7 +95,30 @@ exports.createPartido = async (req, res) => {
     partido
       .save(partido)
       .then((data) => {
-        res.status(200).send(data);
+        res.status(200).send({
+
+        
+          id:data.id,
+          goles_local: data.goles_local,
+          goles_visitante: data.goles_visitante,
+          posesion_local: data.posesion_local,
+          posesion_visitante: data.posesion_visitante,
+          pases_local: data.pases_local,
+          pases_visitante: data.pases_visitante,
+          tiros_local: data.tiros_local,
+          tiros_visitante: data.tiros_visitante,
+          corners_local: data.corners_local,
+          corners_visitante: data.corners_visitante,
+          faltas_local: data.faltas_local,
+          faltaVisitante: data.faltaVisitante,
+          id_equipo_local: data.id_equipo_local,
+          id_equipo_visitante: data.id_equipo_visitante,
+          id_liga: data.id_liga,
+          id_creador: data.id_creador,
+          terminado: data.terminado,
+          id_arbitro: data.id_arbitro,
+          fecha: moment().format('YYYY-MM-DD')
+        });
       })
       .catch((err) => {
         res.status(500).send({

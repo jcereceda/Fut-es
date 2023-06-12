@@ -25,5 +25,5 @@ class Partido (
     var corners_visitante : Int = 0
     var faltas_local : Int = 0
     var faltas_visitante : Int = 0
-    lateinit var fecha: String;
+    lateinit var fecha: String
 }
